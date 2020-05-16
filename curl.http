@@ -1,0 +1,25 @@
+### good request
+POST http://localhost:3000/items
+content-type: application/json
+
+{
+    "name":"tanaka",
+    "age":20
+}
+
+### bad request (nameが無い)
+POST http://localhost:3000/items
+content-type: application/json
+
+{
+    "age":20
+}
+
+### bad request (ageがstring)
+POST http://localhost:3000/items
+content-type: application/json
+
+{
+    "name":"tanaka",
+    "age":"20"
+}
